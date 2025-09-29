@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dragons Basketball News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stytles.css">
+</head>
+<body>
+    <header>
+        <h1>Dragons Basketball News</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="blog">
+            <article>
+                <h2>Season Opener Recap</h2>
+                <p class="date">June 10, 2024</p>
+                <p>The Dragons kicked off the season with a thrilling win against the Tigers. Star player Alex Johnson scored 28 points, leading the team to victory. Read more about the highlights and post-game interviews.</p>
+                <a href="blog/season-opener.html">Read More</a>
+            </article>
+            <article>
+                <h2>Player Spotlight: Maya Lee</h2>
+                <p class="date">June 5, 2024</p>
+                <p>Maya Lee has been a driving force for the Dragons this year. Learn about her training regimen and how she motivates her teammates on and off the court.</p>
+                <a href="blog/maya-lee-spotlight.html">Read More</a>
+            </article>
+            <article>
+                <h2>Upcoming Events</h2>
+                <p class="date">June 1, 2024</p>
+                <p>Don't miss our upcoming fan meet-and-greet and charity game. Check out the details and how you can participate in supporting the Dragons community.</p>
+                <a href="blog/upcoming-events.html">Read More</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dragons Basketball. All rights reserved.</p>
+    </footer>
+</body>
+</html>
