@@ -8,25 +8,177 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="./assets/css/theme.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="./assets/img/logo.jpg">
+  <link rel="icon" type="image/png" href="./assets/img/logo 2.png">
+  <style>
+    /* ===== LARGE BOUNCING BASKETBALL STYLES ===== */
+.hero-basketball-container {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 180px; /* Increased size */
+  height: 180px; /* Increased size */
+}
+
+.hero-basketball {
+  width: 100%;
+  height: 100%;
+  animation: perfect-bounce 1.3s ease-in-out infinite;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
+  transition: all 0.3s ease;
+  color: #ff6b35;
+  font-size: 180px; /* Match icon size to container */
+}
+
+.hero-basketball:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
+}
+
+/* Perfect bounce physics */
+  @keyframes perfect-bounce {
+    0% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    15% {
+      transform: translateY(-80px);
+      animation-timing-function: ease-in;
+    }
+    30% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    45% {
+      transform: translateY(-100px);
+      animation-timing-function: ease-in;
+    }
+    60% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    75% {
+      transform: translateY(-35px);
+      animation-timing-function: ease-in;
+    }
+    90% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+/* Adjust hero content to share space equally with basketball */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 60%; /* Reduced to make more space for basketball */
+  margin-right: 25%; /* Push content left to balance with basketball */
+}
+
+/* Ensure hero sections have balanced layout */
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Center align content on mobile */
+@media (max-width: 992px) {
+  .hero-basketball-container {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin: 3rem auto 2rem; /* More space around ball on mobile */
+    width: 140px;
+    height: 140px;
+  }
+  
+  .hero-basketball {
+    font-size: 140px;
+    animation: basketball-bounce-simple-mobile 0.5s ease-in-out infinite;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+  
+  /* Smaller bounce on mobile */
+  @keyframes basketball-bounce-simple-mobile {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-35px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-basketball-container {
+    width: 120px;
+    height: 120px;
+    margin: 2.5rem auto 1.5rem;
+  }
+  
+  .hero-basketball {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-basketball-container {
+    width: 100px;
+    height: 100px;
+    margin: 2rem auto 1rem;
+  }
+  
+  .hero-basketball {
+    font-size: 100px;
+  }
+}
+
+/* Ensure hero sections have enough height */
+.home-hero {
+  min-height: 70vh;
+}
+
+.training-hero,
+.shop-hero,
+.contact-hero {
+  min-height: 60vh;
+}
+
+.news-hero {
+  min-height: 65vh;
+}
+  </style>
 </head>
 <body>
 
 <!-- Topbar -->
 <div class="topbar py-1 text-white">
   <div class="container d-flex justify-content-between align-items-center small">
-    <div class="d-flex align-items-center gap-3">
+    <div class="d-flex align-items-center gap-3 flex-grow-1">
       <span class="badge bg-warning text-dark me-2">HOT NEWS</span>
-      <div class="ticker">
-        <span>Game 2 updates • Training clinics • Rookie signings</span>
+      <div class="ticker flex-grow-1 d-none d-md-block">
+        <div class="ticker-content">
+          <span>🏀 Game 2 updates • 🏆 Training clinics • 📝 Rookie signings • 🔥 Summer league starting soon • 🛒 New merchandise available</span>
+        </div>
       </div>
     </div>
-    <div class="d-none d-md-flex align-items-center gap-3">
+    <div class="d-none d-md-flex align-items-center gap-3 ms-3">
       <span><i class="fa-regular fa-envelope me-1"></i>hoopconnect@gmail.com</span>
-      <a href="#" class="text-white"><i class="fab fa-x-twitter"></i></a>
-      <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
-      <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://facebook.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
     </div>
   </div>
 </div>
@@ -35,56 +187,134 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="./assets/img/logo.jpg" width="56" height="28" class="me-2" alt="Logo">
+      <img src="./assets/img/logo 2.png" width="60" height="60" class="me-2" alt="HoopConnect Logo" loading="lazy">
       <span class="fw-bold text-primary">HoopConnect</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="nav">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="training.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="news.html">News</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="shop.html">Shop</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="contact.html">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="training.html">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="news.html">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="contact.html">Contact</a>
+        </li>
       </ul>
       <div class="d-flex align-items-center ms-lg-3 gap-2">
-        <a class="btn btn-warning btn-sm" href="shop.html#cart"><i class="fa-solid fa-cart-shopping me-1"></i>Cart</a>
+        <a class="btn btn-warning btn-sm position-relative" href="shop.html#cart-section">
+          <i class="fa-solid fa-cart-shopping me-1"></i>Cart
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+        </a>
       </div>
     </div>
   </div>
 </nav>
 
 <!-- Hero Section -->
-<header class="hero text-white" style="background: linear-gradient(rgba(0,123,255,0.5), rgba(255,255,255,0.1)), url('./assets/img/hero-bg.jpg') center/cover no-repeat; height: 70vh;">
-  <div class="container h-100 d-flex flex-column justify-content-center">
-    <h1 class="display-4 fw-bold">Elevate Your Game</h1>
-    <p class="lead">HoopConnect empowers every basketball player with world-class training and gear.</p>
-    <a href="training.html" class="btn btn-primary btn-lg mt-3">Join Training</a>
+<header class="hero text-white home-hero">
+  <div class="container h-100 position-relative">
+    <div class="h-100 d-flex flex-column justify-content-center hero-content">
+      <h1 class="display-4 fw-bold mb-3">Elevate Your Game</h1>
+      <p class="lead mb-4 fs-5">HoopConnect empowers every basketball player with world-class training and premium gear.</p>
+      <div class="d-flex flex-column flex-sm-row gap-3">
+        <a href="training.html" class="btn btn-primary btn-lg px-4">Join Training</a>
+        <a href="shop.html" class="btn btn-outline-light btn-lg px-4">Shop Now</a>
+      </div>
+    </div>
+    
+    <!-- Large Bouncing Basketball -->
+    <div class="hero-basketball-container">
+      <i class="fas fa-basketball-ball hero-basketball"></i>
+    </div>
   </div>
 </header>
 
-<!-- Upcoming Events -->
-<section class="py-5 bg-light">
+<!-- Features Section -->
+<section class="section-padding bg-white">
   <div class="container">
-    <h3 class="fw-bold mb-4 text-primary">Upcoming Events</h3>
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h2 class="fw-bold text-primary mb-3">Why Choose HoopConnect?</h2>
+        <p class="text-muted lead">Professional training, premium gear, and a winning community</p>
+      </div>
+    </div>
     <div class="row g-4">
-      <div class="col-md-6">
+      <div class="col-md-4 text-center">
+        <div class="feature-icon">
+          <i class="fas fa-users text-white fs-4"></i>
+        </div>
+        <h5 class="fw-bold">Expert Coaching</h5>
+        <p class="text-muted">Learn from professional coaches with years of experience</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="feature-icon">
+          <i class="fas fa-basketball-ball text-white fs-4"></i>
+        </div>
+        <h5 class="fw-bold">Premium Equipment</h5>
+        <p class="text-muted">Official gear designed for performance and style</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="feature-icon">
+          <i class="fas fa-trophy text-white fs-4"></i>
+        </div>
+        <h5 class="fw-bold">Proven Results</h5>
+        <p class="text-muted">Join a community of champions and rising stars</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Events -->
+<section class="section-padding bg-light">
+  <div class="container">
+    <div class="row align-items-end mb-4">
+      <div class="col-md-8">
+        <h3 class="fw-bold text-primary mb-0">Upcoming Events</h3>
+        <p class="text-muted">Don't miss these exciting basketball events</p>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <a href="#" class="btn btn-outline-primary">View All Events</a>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-5 col-md-6">
         <div class="card shadow-sm h-100">
-          <img src="./assets/img/3x3.jpg" class="card-img-top" alt="3x3 Event">
-          <div class="card-body">
-            <h5 class="card-title">3X3 World Tour Lausanne</h5>
-            <p class="card-text text-muted">Saturday, August 5 • WORLD TOUR Lausanne</p>
+          <div class="img-loading" style="height: 200px;">
+            <img src="./assets/img/3x3.jpg" class="card-img-top" alt="3x3 World Tour Lausanne basketball tournament" loading="lazy">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">3X3 World Tour Lausanne</h5>
+            <p class="card-text text-muted flex-grow-1">Experience the intensity of 3x3 basketball at the world's premier streetball tournament.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <small class="text-primary fw-semibold"><i class="far fa-calendar me-1"></i>August 5, 2025</small>
+              <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-5 col-md-6">
         <div class="card shadow-sm h-100">
-          <img src="./assets/img/STATS.jpg" class="card-img-top" alt="Afrobasket Event">
-          <div class="card-body">
-            <h5 class="card-title">Men's Afrobasket</h5>
-            <p class="card-text text-muted">Saturday, May 29 • Angola</p>
+          <div class="img-loading" style="height: 200px;">
+            <img src="./assets/img/afrobasket.jpg" class="card-img-top" alt="Men's Afrobasket championship in Angola" loading="lazy">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Men's Afrobasket</h5>
+            <p class="card-text text-muted flex-grow-1">Witness Africa's finest basketball talent compete for continental supremacy.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <small class="text-primary fw-semibold"><i class="far fa-calendar me-1"></i>May 29, 2025</small>
+              <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -92,20 +322,54 @@
   </div>
 </section>
 
-<!-- Latest Headlines -->
-<section class="py-5">
+<!-- Latest Headlines & Shop -->
+<section class="section-padding bg-white">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-md-6">
-        <h3 class="fw-bold text-primary">Latest Headlines</h3>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">HoopConnect unveils black-and-gold alternate uniforms.</li>
-          <li class="list-group-item">Rookie PG drops a double-double in preseason.</li>
-          <li class="list-group-item">Defense-first strategy pays off in scrimmage.</li>
-        </ul>
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <h3 class="fw-bold text-primary mb-4">Latest Headlines</h3>
+        <div class="list-group list-group-flush">
+          <div class="list-group-item d-flex align-items-start px-0">
+            <i class="fas fa-basketball-ball text-warning mt-1 me-3"></i>
+            <div>
+              <h6 class="fw-bold mb-1">HoopConnect Unveils Black-and-Gold Alternate Uniforms</h6>
+              <p class="text-muted small mb-0">New limited edition jerseys available in store now</p>
+            </div>
+          </div>
+          <div class="list-group-item d-flex align-items-start px-0">
+            <i class="fas fa-star text-warning mt-1 me-3"></i>
+            <div>
+              <h6 class="fw-bold mb-1">Rookie PG Drops Double-Double in Preseason</h6>
+              <p class="text-muted small mb-0">Impressive performance from our newest recruit</p>
+            </div>
+          </div>
+          <div class="list-group-item d-flex align-items-start px-0">
+            <i class="fas fa-shield-alt text-warning mt-1 me-3"></i>
+            <div>
+              <h6 class="fw-bold mb-1">Defense-First Strategy Pays Off in Scrimmage</h6>
+              <p class="text-muted small mb-0">Team shows improved defensive coordination</p>
+            </div>
+          </div>
+          <div class="list-group-item d-flex align-items-start px-0">
+            <i class="fas fa-home text-warning mt-1 me-3"></i>
+            <div>
+              <h6 class="fw-bold mb-1">New Training Facility Opening Next Month</h6>
+              <p class="text-muted small mb-0">State-of-the-art center with professional courts</p>
+            </div>
+          </div>
+        </div>
+        <a href="news.html" class="btn btn-outline-primary mt-3">View All News <i class="fas fa-arrow-right ms-1"></i></a>
       </div>
-      <div class="col-md-6 d-flex align-items-center justify-content-center">
-        <a href="shop.html" class="btn btn-primary btn-lg">Visit Shop</a>
+      <div class="col-lg-6">
+        <div class="bg-primary text-white rounded-3 p-4 p-lg-5 text-center">
+          <i class="fas fa-trophy display-1 text-warning mb-3"></i>
+          <h3 class="fw-bold mb-3">Premium Basketball Gear</h3>
+          <p class="lead mb-4">Get official HoopConnect merchandise designed for performance and style. Elevate your game with our exclusive collection.</p>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+            <a href="shop.html" class="btn btn-warning btn-lg">Shop Now</a>
+            <a href="shop.html#jerseys" class="btn btn-outline-light btn-lg">View Jerseys</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -115,34 +379,133 @@
 <footer class="bg-primary text-white pt-5">
   <div class="container">
     <div class="row g-4">
-      <div class="col-md-4">
-        <h5>About HoopConnect</h5>
-        <p>Elite basketball club focused on community, player development, and electrifying game nights.</p>
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">About HoopConnect</h5>
+        <p class="mb-3">Elite basketball club focused on community, player development, and electrifying game nights. Join us in our mission to elevate the game.</p>
+        <div class="d-flex gap-2">
+          <span class="badge bg-warning text-dark">Professional</span>
+          <span class="badge bg-light text-primary">Community</span>
+          <span class="badge bg-warning text-dark">Excellence</span>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h5>Newsletter</h5>
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">Newsletter</h5>
+        <p class="small text-light mb-3">Stay updated with latest news, events, and exclusive offers.</p>
         <form id="newsletter" class="row g-2">
-          <div class="col-8"><input type="email" required class="form-control" placeholder="Email"></div>
-          <div class="col-4 d-grid"><button class="btn btn-warning" type="submit">Join</button></div>
+          <div class="col-12">
+            <input type="email" name="email" required class="form-control" placeholder="Enter your email">
+            <div class="form-feedback text-warning"></div>
+          </div>
+          <div class="col-12 d-grid">
+            <button class="btn btn-warning fw-semibold" type="submit">Subscribe Now</button>
+          </div>
         </form>
+        <div class="alert alert-success mt-2" role="alert">
+          <i class="fas fa-check-circle me-2"></i>Thank you for subscribing to our newsletter!
+        </div>
       </div>
-      <div class="col-md-4">
-        <h5>Follow</h5>
-        <div class="d-flex gap-3 fs-4">
-          <a class="text-white" href="#"><i class="fab fa-x-twitter"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-facebook"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-instagram"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-youtube"></i></a>
+      <div class="col-lg-4 col-md-12">
+        <h5 class="fw-bold mb-3">Follow Us</h5>
+        <p class="text-light small mb-3">Connect with us on social media for daily updates and behind-the-scenes content.</p>
+        <div class="d-flex gap-3 fs-4 mb-3">
+          <a class="text-white hover-lift" href="https://twitter.com/hoopconnect" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a class="text-white hover-lift" href="https://facebook.com/hoopconnect" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a class="text-white hover-lift" href="https://instagram.com/hoopconnect" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="text-white hover-lift" href="https://youtube.com/hoopconnect" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="small text-light">
+          <p class="mb-1"><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</p>
+          <p class="mb-0"><i class="fas fa-envelope me-2"></i>hoopconnect@gmail.com</p>
         </div>
       </div>
     </div>
     <hr class="border-light my-4" />
-    <div class="d-flex justify-content-between align-items-center pb-3 small">
-      <span>© 2025 HoopConnect Basketball</span>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3 small">
+      <span class="mb-2 mb-md-0">© 2025 HoopConnect Basketball. All rights reserved.</span>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+        <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+        <a href="#" class="text-white text-decoration-none">Cookie Policy</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Newsletter Form Handling
+  document.getElementById('newsletter').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const emailInput = this.querySelector('input[type="email"]');
+    const feedback = this.querySelector('.form-feedback');
+    const alert = document.querySelector('.alert');
+    const button = this.querySelector('button');
+    const originalText = button.innerHTML;
+    
+    // Simple email validation
+    const email = emailInput.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailRegex.test(email)) {
+      emailInput.classList.add('error');
+      emailInput.classList.remove('success');
+      feedback.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    
+    // Show loading state
+    button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Subscribing...';
+    button.disabled = true;
+    
+    // Simulate API call
+    setTimeout(() => {
+      emailInput.classList.remove('error');
+      emailInput.classList.add('success');
+      feedback.textContent = '';
+      
+      // Show success message
+      alert.style.display = 'block';
+      emailInput.value = '';
+      
+      // Reset button
+      button.innerHTML = originalText;
+      button.disabled = false;
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        alert.style.display = 'none';
+      }, 5000);
+    }, 1500);
+  });
+
+  // Image loading handler
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (img.complete) {
+        img.parentElement.classList.remove('img-loading');
+      } else {
+        img.addEventListener('load', function() {
+          this.parentElement.classList.remove('img-loading');
+        });
+        img.addEventListener('error', function() {
+          this.parentElement.classList.remove('img-loading');
+        });
+      }
+    });
+  });
+
+  // Add hover effect to social icons
+  document.querySelectorAll('.hover-lift').forEach(link => {
+    link.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-2px)';
+      this.style.transition = 'transform 0.2s ease';
+    });
+    link.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+</script>
 </body>
 </html>

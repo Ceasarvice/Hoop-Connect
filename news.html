@@ -8,224 +8,410 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="./assets/css/theme.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./assets/img/logo 2.png">
+  <style>/* ===== COMPACT NEWS CAROUSEL STYLES ===== */
+.news-carousel-img {
+  height: 650px;
+  object-fit: cover;
+  width: 50%;
+}
+
+.news-carousel-caption {
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.news-carousel-caption h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-carousel-caption .lead {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.news-carousel-container {
+  margin-bottom: 2rem;
+}
+
+/* Responsive adjustments for compact news carousel */
+@media (max-width: 768px) {
+  .news-carousel-img {
+    height: 250px;
+  }
+  
+  .news-carousel-caption {
+    padding: 1rem;
+  }
+  
+  .news-carousel-caption h1 {
+    font-size: 1.25rem;
+  }
+  
+  .news-carousel-caption .lead {
+    font-size: 0.9rem;
+  }
+  
+  .news-carousel-caption .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}</style>
 </head>
 <body>
+
+<!-- Topbar -->
+<div class="topbar py-1 text-white">
+  <div class="container d-flex justify-content-between align-items-center small">
+    <div class="d-flex align-items-center gap-3 flex-grow-1">
+      <span class="badge bg-warning text-dark me-2">HOT NEWS</span>
+      <div class="ticker flex-grow-1 d-none d-md-block">
+        <div class="ticker-content">
+          <span>🏀 Game 2 updates • 🏆 Training clinics • 📝 Rookie signings • 🔥 Summer league starting soon • 🛒 New merchandise available</span>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-md-flex align-items-center gap-3 ms-3">
+      <span><i class="fa-regular fa-envelope me-1"></i>hoopconnect@gmail.com</span>
+      <a href="https://twitter.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://facebook.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="./assets/img/logo.jpg" width="56" height="28" class="me-2" alt="Logo">
+      <img src="./assets/img/logo 2.png" width="60" height="60" class="me-2" alt="HoopConnect Logo" loading="lazy">
       <span class="fw-bold text-primary">HoopConnect</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="nav">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="training.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link active text-primary fw-bold" href="news.html">News</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="shop.html">Shop</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="contact.html">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="training.html">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="news.html">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="contact.html">Contact</a>
+        </li>
       </ul>
       <div class="d-flex align-items-center ms-lg-3 gap-2">
-        <a class="btn btn-warning btn-sm" href="shop.html#cart"><i class="fa-solid fa-cart-shopping me-1"></i>Cart</a>
+        <a class="btn btn-warning btn-sm position-relative" href="shop.html#cart-section">
+          <i class="fa-solid fa-cart-shopping me-1"></i>Cart
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+        </a>
       </div>
     </div>
   </div>
 </nav>
 
 <!-- Hero Carousel -->
-<div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./assets/img/ayuk yves.jpg" class="d-block w-100" alt="News Slide 1">
-      <div class="carousel-caption d-none d-md-block">
-        <h1 class="fw-bold">Latest News</h1>
-        <p>Stay up to date with HoopConnect updates, games, and events.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="./assets/img/YVES.jpg" class="d-block w-100" alt="News Slide 2">
-      <div class="carousel-caption d-none d-md-block">
-        <h1 class="fw-bold">Game Highlights</h1>
-        <p>See the best plays and moments from our latest games.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="./assets/img/Mrs.Yves.jpg" class="d-block w-100" alt="News Slide 3">
-      <div class="carousel-caption d-none d-md-block">
-        <h1 class="fw-bold">Team Updates</h1>
-        <p>Follow player announcements and roster changes.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<!-- News Carousel Section -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="mb-4 fw-bold text-primary">Latest News</h2>
-    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-
-      <div class="carousel-inner">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <img src="./assets/img/minister.jpg" class="d-block w-100 rounded-3" alt="News 1" style="height: 800px; object-fit: cover;">
-          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
-            <h5>HoopConnect Welcomes the Minister Of Secondary Education at FENASCO A GAMES ABONG MBANG</h5>
-            <p class="text-muted">April 15, 2025</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+<!-- Hero Carousel -->
+<section class="news-carousel-container">
+  <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="img-loading" style="height: 400px;">
+          <img src="./assets/img/minister.jpg" class="d-block w-100 news-carousel-img" alt="Minister of Education visits FENASCO Games" loading="lazy">
+        </div>
+        <div class="news-carousel-caption d-flex flex-column justify-content-end">
+          <div class="container">
+            <h1 class="fw-bold mb-2">Minister Visits FENASCO Games</h1>
+            <p class="lead mb-3">HoopConnect welcomes the Minister of Secondary Education at FENASCO A Games in Abong Mbang</p>
+            <a href="#" class="btn btn-primary btn-lg">Read Full Story</a>
           </div>
         </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <img src="./assets/img/shooting.jpg" class="d-block w-100 rounded-3" alt="News 2" style="height: 800px; object-fit: cover;">
-          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
-            <h5>Rookie SG Impresses in Preseason</h5>
-            <p class="text-muted">August 4, 2025</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-          <img src="./assets/img/shooter.jpg" class="d-block w-100 rounded-3" alt="News 3" style="height: 800px; object-fit: cover;">
-          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
-            <h5>Defense-First Strategy Works</h5>
-            <p class="text-muted">August 3, 2025</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
-          </div>
-        </div>
-
       </div>
-
-      <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-
+      <div class="carousel-item">
+        <div class="img-loading" style="height: 400px;">
+          <img src="./assets/img/shooting.jpg" class="d-block w-100 news-carousel-img" alt="Rookie SG impressive performance" loading="lazy">
+        </div>
+        <div class="news-carousel-caption d-flex flex-column justify-content-end">
+          <div class="container">
+            <h1 class="fw-bold mb-2">Rookie SG Shines in Preseason</h1>
+            <p class="lead mb-3">Young shooting guard shows incredible performance during Vision C 2025 tournament</p>
+            <a href="#" class="btn btn-primary btn-lg">Read Full Story</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="img-loading" style="height: 400px;">
+          <img src="./assets/img/shooter.jpg" class="d-block w-100 news-carousel-img" alt="Defense strategy success" loading="lazy">
+        </div>
+        <div class="news-carousel-caption d-flex flex-column justify-content-end">
+          <div class="container">
+            <h1 class="fw-bold mb-2">Defense Strategy Pays Off</h1>
+            <p class="lead mb-3">Team's defense-first approach leads to impressive scrimmage results</p>
+            <a href="#" class="btn btn-primary btn-lg">Read Full Story</a>
+          </div>
+        </div>
+      </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </section>
 
-<!-- Figma-style News Section -->
-<section class="py-5 bg-light">
+<!-- Latest News Section -->
+<section class="section-padding bg-white">
   <div class="container">
-    <h2 class="mb-4 fw-bold text-primary">Latest News</h2>
+    <div class="row align-items-end mb-5">
+      <div class="col-md-8">
+        <h2 class="fw-bold text-primary mb-0">Latest News</h2>
+        <p class="text-muted">Stay updated with HoopConnect news, games, and events</p>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <a href="#" class="btn btn-outline-primary">View All News</a>
+      </div>
+    </div>
     <div class="row g-4">
-
       <!-- News Card 1 -->
-      <div class="col-md-4">
-        <div class="card shadow-lg border-0 rounded-4 overflow-hidden hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden hover-scale h-100">
           <div class="position-relative">
-            <img src="./assets/img/minister.jpg" class="card-img-top" alt="News 1" style="height: 250px; object-fit: cover;">
+            <div class="img-loading" style="height: 250px;">
+              <img src="./assets/img/minister.jpg" class="card-img-top" alt="Minister visits FENASCO Games" loading="lazy">
+            </div>
             <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">HOT</span>
           </div>
-          <div class="card-body">
-            <h5 class="card-title fw-bold">HoopConnect Welcomes Minister at FENASCO A Games</h5>
-            <p class="card-text text-muted small">April 15, 2025</p>
-            <p class="card-text">The team hosted the Minister of Secondary Education for an inspiring basketball event.</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="card-title fw-bold">Minister Visits FENASCO Games</h5>
+            </div>
+            <p class="card-text text-muted small mb-3"><i class="far fa-calendar me-1"></i>April 15, 2025</p>
+            <p class="card-text flex-grow-1">HoopConnect team hosted the Minister of Secondary Education for an inspiring basketball event at FENASCO A Games in Abong Mbang.</p>
+            <div class="mt-auto">
+              <a href="#" class="btn btn-primary btn-sm">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- News Card 2 -->
-      <div class="col-md-4">
-        <div class="card shadow-lg border-0 rounded-4 overflow-hidden hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden hover-scale h-100">
           <div class="position-relative">
-            <img src="./assets/img/shooting.jpg" class="card-img-top" alt="News 2" style="height: 250px; object-fit: cover;">
-            <span class="badge bg-info text-dark position-absolute top-0 start-0 m-3">NEW</span>
+            <div class="img-loading" style="height: 250px;">
+              <img src="./assets/img/shooting.jpg" class="card-img-top" alt="Rookie SG impressive performance" loading="lazy">
+            </div>
+            <span class="badge bg-info text-white position-absolute top-0 start-0 m-3">NEW</span>
           </div>
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Rookie SG Impresses in Preseason</h5>
-            <p class="card-text text-muted small">August 4, 2025</p>
-            <p class="card-text">Rookie shooting guard shows incredible performance during Vision C 2025.</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="card-title fw-bold">Rookie SG Impresses in Preseason</h5>
+            </div>
+            <p class="card-text text-muted small mb-3"><i class="far fa-calendar me-1"></i>August 4, 2025</p>
+            <p class="card-text flex-grow-1">Rookie shooting guard shows incredible performance and scoring ability during Vision C 2025 preseason tournament.</p>
+            <div class="mt-auto">
+              <a href="#" class="btn btn-primary btn-sm">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- News Card 3 -->
-      <div class="col-md-4">
-        <div class="card shadow-lg border-0 rounded-4 overflow-hidden hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden hover-scale h-100">
           <div class="position-relative">
-            <img src="./assets/img/shooter.jpg" class="card-img-top" alt="News 3" style="height: 250px; object-fit: cover;">
-            <span class="badge bg-success text-dark position-absolute top-0 start-0 m-3">TRENDING</span>
+            <div class="img-loading" style="height: 250px;">
+              <img src="./assets/img/shooter.jpg" class="card-img-top" alt="Defense strategy success" loading="lazy">
+            </div>
+            <span class="badge bg-success text-white position-absolute top-0 start-0 m-3">TRENDING</span>
           </div>
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Defense-First Strategy Works</h5>
-            <p class="card-text text-muted small">August 3, 2025</p>
-            <p class="card-text">Team defense strategy pays off in preseason scrimmage games.</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="card-title fw-bold">Defense-First Strategy Works</h5>
+            </div>
+            <p class="card-text text-muted small mb-3"><i class="far fa-calendar me-1"></i>August 3, 2025</p>
+            <p class="card-text flex-grow-1">Team's new defense-first strategy pays off with impressive results in preseason scrimmage games against local rivals.</p>
+            <div class="mt-auto">
+              <a href="#" class="btn btn-primary btn-sm">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- Add this CSS in your theme.css or inside <style> -->
-<style>
-  .hover-scale {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .hover-scale:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
-  }
-</style>
-
-
-<!-- Footer -->
-<footer class="bg-primary text-white pt-5">
+<!-- Newsletter Section -->
+<section class="section-padding bg-primary text-white">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <h5>About HoopConnect</h5>
-        <p>Elite basketball club focused on community and player development.</p>
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h3 class="fw-bold mb-3">Stay Updated</h3>
+        <p class="lead mb-0">Get the latest HoopConnect news, game schedules, and exclusive content delivered to your inbox.</p>
       </div>
-      <div class="col-md-4">
-        <h5>Newsletter</h5>
-        <form id="newsletter" class="row g-2">
-          <div class="col-8"><input type="email" required class="form-control" placeholder="Email"></div>
-          <div class="col-4 d-grid"><button class="btn btn-warning" type="submit">Join</button></div>
+      <div class="col-lg-6">
+        <form class="row g-2">
+          <div class="col-8">
+            <input type="email" class="form-control" placeholder="Enter your email">
+          </div>
+          <div class="col-4 d-grid">
+            <button class="btn btn-warning fw-semibold" type="submit">Subscribe</button>
+          </div>
         </form>
       </div>
-      <div class="col-md-4">
-        <h5>Follow</h5>
-        <div class="d-flex gap-3 fs-4">
-          <a class="text-white" href="#"><i class="fab fa-x-twitter"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-facebook"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-instagram"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">About HoopConnect</h5>
+        <p class="mb-3">Elite basketball club focused on community, player development, and electrifying game nights. Join us in our mission to elevate the game.</p>
+        <div class="d-flex gap-2">
+          <span class="badge bg-warning text-dark">Professional</span>
+          <span class="badge bg-primary">Community</span>
+          <span class="badge bg-warning text-dark">Excellence</span>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">Newsletter</h5>
+        <p class="small text-light mb-3">Stay updated with latest news, events, and exclusive offers.</p>
+        <form id="newsletter" class="row g-2">
+          <div class="col-12">
+            <input type="email" name="email" required class="form-control" placeholder="Enter your email">
+            <div class="form-feedback text-warning"></div>
+          </div>
+          <div class="col-12 d-grid">
+            <button class="btn btn-warning fw-semibold" type="submit">Subscribe Now</button>
+          </div>
+        </form>
+        <div class="alert alert-success mt-2" role="alert">
+          <i class="fas fa-check-circle me-2"></i>Thank you for subscribing to our newsletter!
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <h5 class="fw-bold mb-3">Follow Us</h5>
+        <p class="text-light small mb-3">Connect with us on social media for daily updates and behind-the-scenes content.</p>
+        <div class="d-flex gap-3 fs-4 mb-3">
+          <a class="text-white hover-lift" href="https://twitter.com/hoopconnect" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a class="text-white hover-lift" href="https://facebook.com/hoopconnect" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a class="text-white hover-lift" href="https://instagram.com/hoopconnect" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="text-white hover-lift" href="https://youtube.com/hoopconnect" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="small text-light">
+          <p class="mb-1"><i class="fas fa-phone me-2"></i>+237 699 123 456</p>
+          <p class="mb-0"><i class="fas fa-envelope me-2"></i>hoopconnect@gmail.com</p>
         </div>
       </div>
     </div>
     <hr class="border-light my-4" />
-    <div class="d-flex justify-content-between align-items-center pb-3 small">
-      <span>© 2025 HoopConnect Basketball</span>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3 small">
+      <span class="mb-2 mb-md-0">© 2025 HoopConnect Basketball. All rights reserved.</span>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+        <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+        <a href="#" class="text-white text-decoration-none">Cookie Policy</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Newsletter Form Handling
+  document.getElementById('newsletter').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const emailInput = this.querySelector('input[type="email"]');
+    const feedback = this.querySelector('.form-feedback');
+    const alert = this.parentElement.querySelector('.alert');
+    const button = this.querySelector('button');
+    const originalText = button.innerHTML;
+    
+    // Simple email validation
+    const email = emailInput.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailRegex.test(email)) {
+      emailInput.classList.add('error');
+      emailInput.classList.remove('success');
+      feedback.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    
+    // Show loading state
+    button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Subscribing...';
+    button.disabled = true;
+    
+    // Simulate API call
+    setTimeout(() => {
+      emailInput.classList.remove('error');
+      emailInput.classList.add('success');
+      feedback.textContent = '';
+      
+      // Show success message
+      alert.style.display = 'block';
+      emailInput.value = '';
+      
+      // Reset button
+      button.innerHTML = originalText;
+      button.disabled = false;
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        alert.style.display = 'none';
+      }, 5000);
+    }, 1500);
+  });
+
+  // Image loading handler
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (img.complete) {
+        img.parentElement.classList.remove('img-loading');
+      } else {
+        img.addEventListener('load', function() {
+          this.parentElement.classList.remove('img-loading');
+        });
+        img.addEventListener('error', function() {
+          this.parentElement.classList.remove('img-loading');
+        });
+      }
+    });
+  });
+
+  // Add hover effect to social icons
+  document.querySelectorAll('.hover-lift').forEach(link => {
+    link.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-2px)';
+      this.style.transition = 'transform 0.2s ease';
+    });
+    link.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+</script>
 </body>
 </html>

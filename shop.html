@@ -8,71 +8,197 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="./assets/css/theme.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./assets/img/logo 2.png">
+  <style>
+
+  </style>
 </head>
 <body>
+
+<!-- Topbar -->
+<div class="topbar py-1 text-white">
+  <div class="container d-flex justify-content-between align-items-center small">
+    <div class="d-flex align-items-center gap-3 flex-grow-1">
+      <span class="badge bg-warning text-dark me-2">HOT NEWS</span>
+      <div class="ticker flex-grow-1 d-none d-md-block">
+        <div class="ticker-content">
+          <span>🏀 Game 2 updates • 🏆 Training clinics • 📝 Rookie signings • 🔥 Summer league starting soon • 🛒 New merchandise available</span>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-md-flex align-items-center gap-3 ms-3">
+      <span><i class="fa-regular fa-envelope me-1"></i>hoopconnect@gmail.com</span>
+      <a href="https://twitter.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://facebook.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="./assets/img/logo.jpg" width="56" height="28" class="me-2" alt="Logo">
+      <img src="./assets/img/logo 2.png" width="60" height="60" class="me-2" alt="HoopConnect Logo" loading="lazy">
       <span class="fw-bold text-primary">HoopConnect</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="nav">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="training.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="news.html">News</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="shop.html">Shop</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="contact.html">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="training.html">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="news.html">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="contact.html">Contact</a>
+        </li>
       </ul>
       <div class="d-flex align-items-center ms-lg-3 gap-2">
-        <a class="btn btn-warning btn-sm" href="shop.html#cart"><i class="fa-solid fa-cart-shopping me-1"></i>Cart</a>
+        <a class="btn btn-warning btn-sm position-relative" href="shop.html#cart-section">
+          <i class="fa-solid fa-cart-shopping me-1"></i>Cart
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+        </a>
       </div>
     </div>
   </div>
 </nav>
 
+<!-- Cart Notification -->
+<div class="cart-notification alert alert-success alert-dismissible fade show" role="alert">
+  <i class="fas fa-check-circle me-2"></i>
+  <span id="notification-message">Product added to cart!</span>
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+
 <!-- Hero -->
-<header class="hero text-white" style="background: linear-gradient(rgba(0,123,255,0.5), rgba(255,255,255,0.2)), url('./assets/img/shop-hero.jpg') center/cover no-repeat; height: 50vh;">
-  <div class="container h-100 d-flex flex-column justify-content-center">
-    <h1 class="display-4 fw-bold">HoopConnect Shop</h1>
-    <p class="lead">Gear up with jerseys, shoes, and basketball essentials.</p>
+<header class="hero text-white shop-hero">
+  <div class="container h-100 d-flex flex-column justify-content-center align-items-start hero-content">
+    <h1 class="display-4 fw-bold mb-3">HoopConnect Shop</h1>
+    <p class="lead mb-4 fs-5">Gear up with premium jerseys, shoes, and basketball essentials.</p>
+    <div class="d-flex flex-column flex-sm-row gap-3">
+      <a href="#featured-products" class="btn btn-primary btn-lg px-4">Shop Now</a>
+      <a href="#categories" class="btn btn-outline-light btn-lg px-4">View Categories</a>
+    </div>
   </div>
 </header>
 
-<!-- Product Carousel -->
-<section class="py-5 bg-light">
+<!-- Categories Section -->
+<section id="categories" class="section-padding bg-light">
   <div class="container">
-    <h3 class="fw-bold mb-4 text-primary">Featured Products</h3>
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h2 class="fw-bold text-primary mb-3">Shop Categories</h2>
+        <p class="text-muted lead">Find the perfect gear for your game</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card text-white bg-primary">
+          <div class="card-body text-center p-4">
+            <i class="fas fa-basketball-ball display-6 mb-3"></i>
+            <h4 class="card-title fw-bold">Basketball Shoes</h4>
+            <p class="card-text">Performance footwear for maximum court grip and comfort</p>
+            <a href="#shoes" class="btn btn-warning">Browse Shoes</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-white bg-success">
+          <div class="card-body text-center p-4">
+            <i class="fas fa-tshirt display-6 mb-3"></i>
+            <h4 class="card-title fw-bold">Jerseys & Apparel</h4>
+            <p class="card-text">Official team jerseys and comfortable training wear</p>
+            <a href="#apparel" class="btn btn-warning">Browse Apparel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-white bg-warning">
+          <div class="card-body text-center p-4">
+            <i class="fas fa-basketball display-6 mb-3"></i>
+            <h4 class="card-title fw-bold">Equipment</h4>
+            <p class="card-text">Basketballs, bags, and essential training equipment</p>
+            <a href="#equipment" class="btn btn-primary">Browse Equipment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section id="featured-products" class="section-padding bg-white">
+  <div class="container">
+    <div class="row align-items-end mb-5">
+      <div class="col-md-8">
+        <h2 class="fw-bold text-primary mb-0">Featured Products</h2>
+        <p class="text-muted">Premium basketball gear for serious players</p>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <a href="#" class="btn btn-outline-primary">View All Products</a>
+      </div>
+    </div>
+
+    <!-- Product Carousel -->
     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-
         <!-- Slide 1 -->
         <div class="carousel-item active">
           <div class="row g-4 justify-content-center">
-            <div class="col-md-4">
-              <div class="card shadow-sm">
-                <img src="./assets/img/harden.jpg" class="card-img-top" alt="Harden Shoes">
-                <div class="card-body">
-                  <h5 class="card-title">Harden Vol.8</h5>
-                  <p class="text-muted">Size 40-45</p>
-                  <p class="fw-bold">30,000 XAF</p>
-                  <button class="btn btn-primary w-100">Add to Cart</button>
+            <div class="col-lg-4 col-md-6">
+              <div class="card shadow-sm product-card h-100">
+                <div class="product-badge">
+                  <span class="badge bg-danger">NEW</span>
+                </div>
+                <div class="img-loading" style="height: 250px;">
+                  <img src="./assets/img/harden.jpg" class="card-img-top" alt="Harden Vol.8 Basketball Shoes" loading="lazy">
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold">Harden Vol.8</h5>
+                  <p class="text-muted small">Premium basketball shoes with enhanced grip</p>
+                  <div class="mb-2">
+                    <span class="badge bg-light text-dark">Size 40-45</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-auto">
+                    <span class="fw-bold text-primary fs-5">30,000 XAF</span>
+                    <button class="btn btn-primary btn-sm add-to-cart" data-product="Harden Vol.8" data-price="30000">
+                      <i class="fas fa-cart-plus me-1"></i>Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="card shadow-sm">
-                <img src="./assets/img/lenron.jpg" class="card-img-top" alt="Lebron 20 EP">
-                <div class="card-body">
-                  <h5 class="card-title">Lebron 20 EP</h5>
-                  <p class="text-muted">Size 44-45</p>
-                  <p class="fw-bold">40,000 XAF</p>
-                  <button class="btn btn-primary w-100">Add to Cart</button>
+            <div class="col-lg-4 col-md-6">
+              <div class="card shadow-sm product-card h-100">
+                <div class="product-badge">
+                  <span class="badge bg-warning text-dark">BEST SELLER</span>
+                </div>
+                <div class="img-loading" style="height: 250px;">
+                  <img src="./assets/img/lenron.jpg" class="card-img-top" alt="Lebron 20 EP Basketball Shoes" loading="lazy">
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold">Lebron 20 EP</h5>
+                  <p class="text-muted small">Elite performance shoes for serious players</p>
+                  <div class="mb-2">
+                    <span class="badge bg-light text-dark">Size 44-45</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-auto">
+                    <span class="fw-bold text-primary fs-5">40,000 XAF</span>
+                    <button class="btn btn-primary btn-sm add-to-cart" data-product="Lebron 20 EP" data-price="40000">
+                      <i class="fas fa-cart-plus me-1"></i>Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -82,31 +208,51 @@
         <!-- Slide 2 -->
         <div class="carousel-item">
           <div class="row g-4 justify-content-center">
-            <div class="col-md-4">
-              <div class="card shadow-sm">
-                <img src="./assets/img/dame x.jpg" class="card-img-top" alt="Dame X">
-                <div class="card-body">
-                  <h5 class="card-title">Dame X</h5>
-                  <p class="text-muted">Size 42-43</p>
-                  <p class="fw-bold">30,000 XAF</p>
-                  <button class="btn btn-primary w-100">Add to Cart</button>
+            <div class="col-lg-4 col-md-6">
+              <div class="card shadow-sm product-card h-100">
+                <div class="img-loading" style="height: 250px;">
+                  <img src="./assets/img/dame x.jpg" class="card-img-top" alt="Dame X Basketball Shoes" loading="lazy">
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold">Dame X</h5>
+                  <p class="text-muted small">Lightweight shoes for quick guards</p>
+                  <div class="mb-2">
+                    <span class="badge bg-light text-dark">Size 42-43</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-auto">
+                    <span class="fw-bold text-primary fs-5">30,000 XAF</span>
+                    <button class="btn btn-primary btn-sm add-to-cart" data-product="Dame X" data-price="30000">
+                      <i class="fas fa-cart-plus me-1"></i>Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="card shadow-sm">
-                <img src="./assets/img/hoodie.jpg" class="card-img-top" alt="Sideline Hoodie">
-                <div class="card-body">
-                  <h5 class="card-title">Sideline Hoodie</h5>
-                  <p class="text-muted">Warm & Lightweight</p>
-                  <p class="fw-bold">74,000 XAF</p>
-                  <button class="btn btn-primary w-100">Add to Cart</button>
+            <div class="col-lg-4 col-md-6">
+              <div class="card shadow-sm product-card h-100">
+                <div class="product-badge">
+                  <span class="badge bg-info">LIMITED</span>
+                </div>
+                <div class="img-loading" style="height: 250px;">
+                  <img src="./assets/img/hoodie.jpg" class="card-img-top" alt="Sideline Hoodie" loading="lazy">
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold">Sideline Hoodie</h5>
+                  <p class="text-muted small">Warm & lightweight team hoodie</p>
+                  <div class="mb-2">
+                    <span class="badge bg-light text-dark">S-XXL Available</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-auto">
+                    <span class="fw-bold text-primary fs-5">74,000 XAF</span>
+                    <button class="btn btn-primary btn-sm add-to-cart" data-product="Sideline Hoodie" data-price="74000">
+                      <i class="fas fa-cart-plus me-1"></i>Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
@@ -118,38 +264,229 @@
   </div>
 </section>
 
-<!-- Footer (same as others) -->
-<footer class="bg-primary text-white pt-5">
+<!-- Cart Section -->
+<section id="cart-section" class="section-padding bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="fw-bold text-primary mb-4">Your Shopping Cart</h2>
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="cart-items">
+                  <tr>
+                    <td>Harden Vol.8</td>
+                    <td>30,000 XAF</td>
+                    <td>1</td>
+                    <td>30,000 XAF</td>
+                    <td><button class="btn btn-sm btn-outline-danger">Remove</button></td>
+                  </tr>
+                  <tr>
+                    <td>Lebron 20 EP</td>
+                    <td>40,000 XAF</td>
+                    <td>1</td>
+                    <td>40,000 XAF</td>
+                    <td><button class="btn btn-sm btn-outline-danger">Remove</button></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="3" class="text-end fw-bold">Total:</td>
+                    <td class="fw-bold text-primary">70,000 XAF</td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <a href="shop.html" class="btn btn-outline-primary">Continue Shopping</a>
+              <a href="checkout.html" class="btn btn-primary btn-lg">Proceed to Checkout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5">
   <div class="container">
     <div class="row g-4">
-      <div class="col-md-4">
-        <h5>About HoopConnect</h5>
-        <p>Elite basketball club focused on community and player development.</p>
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">About HoopConnect</h5>
+        <p class="mb-3">Elite basketball club focused on community, player development, and electrifying game nights. Join us in our mission to elevate the game.</p>
+        <div class="d-flex gap-2">
+          <span class="badge bg-warning text-dark">Professional</span>
+          <span class="badge bg-primary">Community</span>
+          <span class="badge bg-warning text-dark">Excellence</span>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h5>Newsletter</h5>
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">Newsletter</h5>
+        <p class="small text-light mb-3">Stay updated with latest products, sales, and exclusive offers.</p>
         <form id="newsletter" class="row g-2">
-          <div class="col-8"><input type="email" required class="form-control" placeholder="Email"></div>
-          <div class="col-4 d-grid"><button class="btn btn-warning" type="submit">Join</button></div>
+          <div class="col-12">
+            <input type="email" name="email" required class="form-control" placeholder="Enter your email">
+            <div class="form-feedback text-warning"></div>
+          </div>
+          <div class="col-12 d-grid">
+            <button class="btn btn-warning fw-semibold" type="submit">Subscribe Now</button>
+          </div>
         </form>
+        <div class="alert alert-success mt-2" role="alert">
+          <i class="fas fa-check-circle me-2"></i>Thank you for subscribing to our newsletter!
+        </div>
       </div>
-      <div class="col-md-4">
-        <h5>Follow</h5>
-        <div class="d-flex gap-3 fs-4">
-          <a class="text-white" href="#"><i class="fab fa-x-twitter"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-facebook"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-instagram"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-youtube"></i></a>
+      <div class="col-lg-4 col-md-12">
+        <h5 class="fw-bold mb-3">Follow Us</h5>
+        <p class="text-light small mb-3">Connect with us on social media for product updates and behind-the-scenes content.</p>
+        <div class="d-flex gap-3 fs-4 mb-3">
+          <a class="text-white hover-lift" href="https://twitter.com/hoopconnect" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a class="text-white hover-lift" href="https://facebook.com/hoopconnect" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a class="text-white hover-lift" href="https://instagram.com/hoopconnect" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="text-white hover-lift" href="https://youtube.com/hoopconnect" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="small text-light">
+          <p class="mb-1"><i class="fas fa-phone me-2"></i>+237 699 123 456</p>
+          <p class="mb-0"><i class="fas fa-envelope me-2"></i>hoopconnect@gmail.com</p>
         </div>
       </div>
     </div>
     <hr class="border-light my-4" />
-    <div class="d-flex justify-content-between align-items-center pb-3 small">
-      <span>© 2025 HoopConnect Basketball</span>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3 small">
+      <span class="mb-2 mb-md-0">© 2025 HoopConnect Basketball. All rights reserved.</span>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+        <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+        <a href="#" class="text-white text-decoration-none">Cookie Policy</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Cart functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartCount = document.getElementById('cart-count');
+    const cartNotification = document.querySelector('.cart-notification');
+    const notificationMessage = document.getElementById('notification-message');
+    
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const product = this.getAttribute('data-product');
+        const price = this.getAttribute('data-price');
+        
+        // Update cart count
+        let currentCount = parseInt(cartCount.textContent);
+        cartCount.textContent = currentCount + 1;
+        
+        // Show notification
+        notificationMessage.textContent = `${product} added to cart!`;
+        cartNotification.style.display = 'block';
+        
+        // Hide notification after 3 seconds
+        setTimeout(() => {
+          cartNotification.style.display = 'none';
+        }, 3000);
+        
+        // Add animation to button
+        this.innerHTML = '<i class="fas fa-check me-1"></i>Added!';
+        this.classList.remove('btn-primary');
+        this.classList.add('btn-success');
+        
+        setTimeout(() => {
+          this.innerHTML = '<i class="fas fa-cart-plus me-1"></i>Add to Cart';
+          this.classList.remove('btn-success');
+          this.classList.add('btn-primary');
+        }, 2000);
+      });
+    });
+    
+    // Newsletter Form Handling
+    document.getElementById('newsletter').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const emailInput = this.querySelector('input[type="email"]');
+      const feedback = this.querySelector('.form-feedback');
+      const alert = this.parentElement.querySelector('.alert');
+      const button = this.querySelector('button');
+      const originalText = button.innerHTML;
+      
+      // Simple email validation
+      const email = emailInput.value;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+      if (!emailRegex.test(email)) {
+        emailInput.classList.add('error');
+        emailInput.classList.remove('success');
+        feedback.textContent = 'Please enter a valid email address.';
+        return;
+      }
+      
+      // Show loading state
+      button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Subscribing...';
+      button.disabled = true;
+      
+      // Simulate API call
+      setTimeout(() => {
+        emailInput.classList.remove('error');
+        emailInput.classList.add('success');
+        feedback.textContent = '';
+        
+        // Show success message
+        alert.style.display = 'block';
+        emailInput.value = '';
+        
+        // Reset button
+        button.innerHTML = originalText;
+        button.disabled = false;
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          alert.style.display = 'none';
+        }, 5000);
+      }, 1500);
+    });
+
+    // Image loading handler
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (img.complete) {
+        img.parentElement.classList.remove('img-loading');
+      } else {
+        img.addEventListener('load', function() {
+          this.parentElement.classList.remove('img-loading');
+        });
+        img.addEventListener('error', function() {
+          this.parentElement.classList.remove('img-loading');
+        });
+      }
+    });
+
+    // Add hover effect to social icons
+    document.querySelectorAll('.hover-lift').forEach(link => {
+      link.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px)';
+        this.style.transition = 'transform 0.2s ease';
+      });
+      link.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+  });
+</script>
 </body>
 </html>

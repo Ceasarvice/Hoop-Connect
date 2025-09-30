@@ -1,0 +1,20 @@
+{
+  "name": "hoop-connect",
+  "version": "1.0.0",
+  "description": "\"# Hoop-Connect\" \r \"# Hoop-code\" \r \"# Hoop-code\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ceasarvice/Hoop-Connect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ceasarvice/Hoop-Connect/issues"
+  },
+  "homepage": "https://github.com/Ceasarvice/Hoop-Connect#readme"
+}

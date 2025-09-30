@@ -8,71 +8,177 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="./assets/css/theme.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./assets/img/logo 2.png">
+  <style>
+    
+  </style>
 </head>
 <body>
+
+<!-- Topbar -->
+<div class="topbar py-1 text-white">
+  <div class="container d-flex justify-content-between align-items-center small">
+    <div class="d-flex align-items-center gap-3 flex-grow-1">
+      <span class="badge bg-warning text-dark me-2">HOT NEWS</span>
+      <div class="ticker flex-grow-1 d-none d-md-block">
+        <div class="ticker-content">
+          <span>🏀 Game 2 updates • 🏆 Training clinics • 📝 Rookie signings • 🔥 Summer league starting soon • 🛒 New merchandise available</span>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-md-flex align-items-center gap-3 ms-3">
+      <span><i class="fa-regular fa-envelope me-1"></i>hoopconnect@gmail.com</span>
+      <a href="https://twitter.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://facebook.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/hoopconnect" class="text-white hover-lift" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="./assets/img/logo.jpg" width="56" height="28" class="me-2" alt="Logo">
+      <img src="./assets/img/logo 2.png" width="60" height="60" class="me-2" alt="HoopConnect Logo" loading="lazy">
       <span class="fw-bold text-primary">HoopConnect</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="nav">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="training.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="news.html">News</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="shop.html">Shop</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="contact.html">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="training.html">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="news.html">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" href="contact.html">Contact</a>
+        </li>
       </ul>
       <div class="d-flex align-items-center ms-lg-3 gap-2">
-        <a class="btn btn-warning btn-sm" href="shop.html#cart"><i class="fa-solid fa-cart-shopping me-1"></i>Cart</a>
+        <a class="btn btn-warning btn-sm position-relative" href="shop.html#cart-section">
+          <i class="fa-solid fa-cart-shopping me-1"></i>Cart
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+        </a>
       </div>
     </div>
   </div>
 </nav>
 
 <!-- Hero -->
-<header class="hero text-white" style="background: linear-gradient(rgba(0,123,255,0.5), rgba(255,255,255,0.2)), url('./assets/img/training-hero.jpg') center/cover no-repeat; height: 50vh;">
-  <div class="container h-100 d-flex flex-column justify-content-center">
-    <h1 class="display-4 fw-bold">Training & Coaches</h1>
-    <p class="lead">Expert coaching and packages for every player level.</p>
+<header class="hero text-white training-hero">
+  <div class="container h-100 d-flex flex-column justify-content-center align-items-start hero-content">
+    <h1 class="display-4 fw-bold mb-3">Training & Coaches</h1>
+    <p class="lead mb-4 fs-5">Expert coaching and personalized training packages for every player level.</p>
+    <div class="d-flex flex-column flex-sm-row gap-3">
+      <a href="#packages" class="btn btn-primary btn-lg px-4">View Packages</a>
+      <a href="#coaches" class="btn btn-outline-light btn-lg px-4">Meet Coaches</a>
+    </div>
   </div>
 </header>
 
-<!-- Coaches Section -->
-<section class="py-5 bg-light">
+<!-- Why Train With Us -->
+<section class="section-padding bg-white">
   <div class="container">
-    <h3 class="fw-bold mb-4 text-primary">Meet Our Coaches</h3>
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h2 class="fw-bold text-primary mb-3">Why Train With HoopConnect?</h2>
+        <p class="text-muted lead">Professional coaching methodology designed for maximum improvement</p>
+      </div>
+    </div>
     <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <img src="./assets/img/gael.png" class="card-img-top" alt="Coach 1">
-          <div class="card-body">
-            <h5 class="card-title">Gael Eden</h5>
-            <p class="text-muted">Personal Trainer</p>
+      <div class="col-md-4 text-center">
+        <div class="feature-icon">
+          <i class="fas fa-chart-line text-white fs-4"></i>
+        </div>
+        <h5 class="fw-bold">Proven Results</h5>
+        <p class="text-muted">Track your progress with our systematic training approach and see measurable improvements</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="feature-icon">
+          <i class="fas fa-user-friends text-white fs-4"></i>
+        </div>
+        <h5 class="fw-bold">Expert Coaches</h5>
+        <p class="text-muted">Learn from certified professionals with years of playing and coaching experience</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="feature-icon">
+          <i class="fas fa-basketball-ball text-white fs-4"></i>
+        </div>
+        <h5 class="fw-bold">Modern Facilities</h5>
+        <p class="text-muted">Train in state-of-the-art facilities with professional equipment and multiple courts</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Coaches Section -->
+<section id="coaches" class="section-padding bg-light">
+  <div class="container">
+    <div class="row align-items-end mb-4">
+      <div class="col-md-8">
+        <h3 class="fw-bold text-primary mb-0">Meet Our Coaches</h3>
+        <p class="text-muted">Professional trainers dedicated to your basketball development</p>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm h-100 text-center">
+          <div class="img-loading" style="height: 250px;">
+            <img src="./assets/img/gael.png" class="card-img-top coach-img" alt="Coach Gael Eden - Personal Trainer" loading="lazy">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Gael Eden</h5>
+            <p class="text-primary fw-semibold">Personal Trainer</p>
+            <p class="card-text text-muted flex-grow-1">Specialized in individual skill development and personalized training programs.</p>
+            <div class="coach-social d-flex justify-content-center gap-3 mt-3">
+              <a href="#" class="text-primary"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" class="text-primary"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <img src="./assets/img/perez.jpg" class="card-img-top" alt="Coach 2">
-          <div class="card-body">
-            <h5 class="card-title">Maloba Perez</h5>
-            <p class="text-muted">Head Coach • Guard Specialist</p>
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm h-100 text-center">
+          <div class="img-loading" style="height: 250px;">
+            <img src="./assets/img/perez.jpg" class="card-img-top coach-img" alt="Coach Maloba Perez - Head Coach & Guard Specialist" loading="lazy">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Maloba Perez</h5>
+            <p class="text-primary fw-semibold">Head Coach • Guard Specialist</p>
+            <p class="card-text text-muted flex-grow-1">Expert in guard play, ball handling, and offensive strategy development.</p>
+            <div class="coach-social d-flex justify-content-center gap-3 mt-3">
+              <a href="#" class="text-primary"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" class="text-primary"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <img src="./assets/img/coach.jpg" class="card-img-top" alt="Coach 3">
-          <div class="card-body">
-            <h5 class="card-title">Coach Perez, Coach Victor, Coach Gael</h5>
-            <p class="text-muted">Trainer • Strength & Conditioning</p>
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm h-100 text-center">
+          <div class="img-loading" style="height: 250px;">
+            <img src="./assets/img/coach.jpg" class="card-img-top coach-img" alt="Coach Team - Strength & Conditioning Specialists" loading="lazy">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Training Team</h5>
+            <p class="text-primary fw-semibold">Strength & Conditioning</p>
+            <p class="card-text text-muted flex-grow-1">Our expert team focuses on athletic performance, injury prevention, and physical development.</p>
+            <div class="coach-social d-flex justify-content-center gap-3 mt-3">
+              <a href="#" class="text-primary"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" class="text-primary"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -81,83 +187,264 @@
 </section>
 
 <!-- Packages Section -->
-<section class="py-5">
+<section id="packages" class="section-padding bg-white">
   <div class="container">
-    <h3 class="fw-bold mb-4 text-primary">Training Packages Registration for each package is 10.000XAF</h3>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card shadow-sm text-center p-3">
-          <h5 class="card-title">Beginner <br>Individual training </h5>
-          <p class="card-text">2 Hours/week • Basics & Fundamentals ~ 1.500xaf</p>
-          <p class="card-text">2 Hours + /week • Basics & Fundamentals ~ 3.000xaf</p>
-
-          <a href="contact.html" class="btn btn-primary w-100">Enroll</a>
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h3 class="fw-bold text-primary mb-3">Training Packages</h3>
+        <p class="text-muted lead">Registration fee: 10,000 XAF for all packages</p>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <!-- Beginner Package -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm price-card h-100 text-center p-4">
+          <div class="card-header bg-transparent border-0 pb-0">
+            <h4 class="fw-bold text-primary">Beginner</h4>
+            <p class="text-muted">Individual Training</p>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                <span>2 Hours/week</span>
+                <span class="fw-bold text-primary">1,500 XAF</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                <span>2+ Hours/week</span>
+                <span class="fw-bold text-primary">3,000 XAF</span>
+              </div>
+            </div>
+            <ul class="list-unstyled text-start small text-muted mb-4 flex-grow-1">
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Fundamentals & Basics</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Individual Attention</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Skill Assessment</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Progress Tracking</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-primary w-100 mt-auto">Enroll Now</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm text-center p-3">
-          <h5 class="card-title">Intermediate</h5>
-          <p class="card-text">1 MONTH • Advanced Skills <br>10.000XAF</p>
-         
-          <p class="card-text">3 MONTHS • Advanced Skills <br>25.000XAF</p>
-        
-          <p class="card-text">12 MONTHS • Advanced Skills <br>90.000XAF</p>
-
-          <a href="contact.html" class="btn btn-primary w-100">Enroll</a>
+      
+      <!-- Intermediate Package -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm price-card featured h-100 text-center p-4">
+          <div class="card-header bg-transparent border-0 pb-0">
+            <h4 class="fw-bold text-primary">Intermediate</h4>
+            <p class="text-muted">Advanced Skills Development</p>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                <span>1 Month</span>
+                <span class="fw-bold text-primary">10,000 XAF</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                <span>3 Months</span>
+                <span class="fw-bold text-primary">25,000 XAF</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                <span>12 Months</span>
+                <span class="price-highlight">90,000 XAF</span>
+              </div>
+            </div>
+            <ul class="list-unstyled text-start small text-muted mb-4 flex-grow-1">
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced Skill Work</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Game Situation Training</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Video Analysis</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Competitive Drills</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary w-100 mt-auto">Enroll Now</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm text-center p-3">
-          <h5 class="card-title">Pro</h5>
-
-          <p class="card-text">Daily training • Personalized Coaching</p>
-
-          <p class="card-text">3 MONTHS 5.000XAF</p>
-
-          <p class="card-text">6 MONTHS 15.000XAF</p>
-
-          <p class="card-text">12 MONTHS 90.000XAF<p>
-          
-          <p class="fw-bold">Registration 25,000 XAF with Jersey and Ball</p>
-          <a href="contact.html" class="btn btn-primary w-100">Enroll</a>
+      
+      <!-- Pro Package -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm price-card h-100 text-center p-4">
+          <div class="card-header bg-transparent border-0 pb-0">
+            <h4 class="fw-bold text-primary">Pro</h4>
+            <p class="text-muted">Elite Performance Training</p>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                <span>3 Months</span>
+                <span class="fw-bold text-primary">5,000 XAF</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                <span>6 Months</span>
+                <span class="fw-bold text-primary">15,000 XAF</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                <span>12 Months</span>
+                <span class="price-highlight">90,000 XAF</span>
+              </div>
+            </div>
+            <div class="bg-warning text-dark p-2 rounded small mb-3">
+              <i class="fas fa-gift me-1"></i>
+              <strong>Registration:</strong> 25,000 XAF (Includes Jersey & Ball)
+            </div>
+            <ul class="list-unstyled text-start small text-muted mb-4 flex-grow-1">
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Personalized Coaching</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Daily Training Sessions</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Professional Equipment</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Performance Analytics</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-primary w-100 mt-auto">Enroll Now</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Footer (same) -->
-<footer class="bg-primary text-white pt-5">
+<!-- CTA Section -->
+<section class="section-padding bg-primary text-white">
+  <div class="container">
+    <div class="row align-items-center text-center">
+      <div class="col-lg-8 mx-auto">
+        <h3 class="fw-bold mb-3">Ready to Elevate Your Game?</h3>
+        <p class="lead mb-4">Join hundreds of players who have transformed their skills with HoopConnect training programs.</p>
+        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+          <a href="contact.html" class="btn btn-warning btn-lg px-4">Start Your Journey</a>
+          <a href="contact.html" class="btn btn-outline-light btn-lg px-4">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5">
   <div class="container">
     <div class="row g-4">
-      <div class="col-md-4">
-        <h5>About HoopConnect</h5>
-        <p>Elite basketball club focused on community and player development.</p>
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">About HoopConnect</h5>
+        <p class="mb-3">Elite basketball club focused on community, player development, and electrifying game nights. Join us in our mission to elevate the game.</p>
+        <div class="d-flex gap-2">
+          <span class="badge bg-warning text-dark">Professional</span>
+          <span class="badge bg-primary">Community</span>
+          <span class="badge bg-warning text-dark">Excellence</span>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h5>Newsletter</h5>
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">Newsletter</h5>
+        <p class="small text-light mb-3">Stay updated with latest training programs, events, and exclusive offers.</p>
         <form id="newsletter" class="row g-2">
-          <div class="col-8"><input type="email" required class="form-control" placeholder="Email"></div>
-          <div class="col-4 d-grid"><button class="btn btn-warning" type="submit">Join</button></div>
+          <div class="col-12">
+            <input type="email" name="email" required class="form-control" placeholder="Enter your email">
+            <div class="form-feedback text-warning"></div>
+          </div>
+          <div class="col-12 d-grid">
+            <button class="btn btn-warning fw-semibold" type="submit">Subscribe Now</button>
+          </div>
         </form>
+        <div class="alert alert-success mt-2" role="alert">
+          <i class="fas fa-check-circle me-2"></i>Thank you for subscribing to our newsletter!
+        </div>
       </div>
-      <div class="col-md-4">
-        <h5>Follow</h5>
-        <div class="d-flex gap-3 fs-4">
-          <a class="text-white" href="#"><i class="fab fa-x-twitter"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-facebook"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-instagram"></i></a>
-          <a class="text-white" href="#"><i class="fab fa-youtube"></i></a>
+      <div class="col-lg-4 col-md-12">
+        <h5 class="fw-bold mb-3">Follow Us</h5>
+        <p class="text-light small mb-3">Connect with us on social media for training tips and behind-the-scenes content.</p>
+        <div class="d-flex gap-3 fs-4 mb-3">
+          <a class="text-white hover-lift" href="https://twitter.com/hoopconnect" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a class="text-white hover-lift" href="https://facebook.com/hoopconnect" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a class="text-white hover-lift" href="https://instagram.com/hoopconnect" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="text-white hover-lift" href="https://youtube.com/hoopconnect" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="small text-light">
+          <p class="mb-1"><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</p>
+          <p class="mb-0"><i class="fas fa-envelope me-2"></i>hoopconnect@gmail.com</p>
         </div>
       </div>
     </div>
     <hr class="border-light my-4" />
-    <div class="d-flex justify-content-between align-items-center pb-3 small">
-      <span>© 2025 HoopConnect Basketball</span>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3 small">
+      <span class="mb-2 mb-md-0">© 2025 HoopConnect Basketball. All rights reserved.</span>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+        <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+        <a href="#" class="text-white text-decoration-none">Cookie Policy</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Newsletter Form Handling
+  document.getElementById('newsletter').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const emailInput = this.querySelector('input[type="email"]');
+    const feedback = this.querySelector('.form-feedback');
+    const alert = document.querySelector('.alert');
+    const button = this.querySelector('button');
+    const originalText = button.innerHTML;
+    
+    // Simple email validation
+    const email = emailInput.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailRegex.test(email)) {
+      emailInput.classList.add('error');
+      emailInput.classList.remove('success');
+      feedback.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    
+    // Show loading state
+    button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Subscribing...';
+    button.disabled = true;
+    
+    // Simulate API call
+    setTimeout(() => {
+      emailInput.classList.remove('error');
+      emailInput.classList.add('success');
+      feedback.textContent = '';
+      
+      // Show success message
+      alert.style.display = 'block';
+      emailInput.value = '';
+      
+      // Reset button
+      button.innerHTML = originalText;
+      button.disabled = false;
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        alert.style.display = 'none';
+      }, 5000);
+    }, 1500);
+  });
+
+  // Image loading handler
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (img.complete) {
+        img.parentElement.classList.remove('img-loading');
+      } else {
+        img.addEventListener('load', function() {
+          this.parentElement.classList.remove('img-loading');
+        });
+        img.addEventListener('error', function() {
+          this.parentElement.classList.remove('img-loading');
+        });
+      }
+    });
+  });
+
+  // Add hover effect to social icons
+  document.querySelectorAll('.hover-lift').forEach(link => {
+    link.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-2px)';
+      this.style.transition = 'transform 0.2s ease';
+    });
+    link.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+</script>
 </body>
 </html>
